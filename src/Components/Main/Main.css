@@ -1,0 +1,98 @@
+.main {
+    flex: 1;
+    max-width: 100%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.header>svg {
+    padding: 0 10px;
+}
+.header > input {
+    border-radius: 8px;
+    padding: 4px;
+    border: none;
+    background-color: rgb(219, 219, 219);
+}
+
+.status-container {
+    max-width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+.status-container::-webkit-scrollbar {
+    display: none;
+}
+
+.status {
+    max-width: 55px;
+    height: 55px;
+    padding: 3px;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(255, 214, 0), rgb(255,122, 0), rgb(255, 0, 105), rgb(211,0, 197), rgb(118, 56, 250));
+}
+
+.post-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 45px;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+}
+
+.post-container::-webkit-scrollbar{
+    display: none;
+}
+
+.postHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.user-post-text {
+    font-weight: bold;
+}
+
+.like-button {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 680px) {
+    
+    .status-container{
+        height: 65px !important;
+        padding: 8px 20px;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgb(219, 219, 219);
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .header {
+        display: none;
+    }
+}

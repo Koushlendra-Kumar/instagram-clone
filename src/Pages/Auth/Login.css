@@ -1,0 +1,68 @@
+.auth-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid rgb(219, 219, 219);
+    max-width: fit-content;
+    min-height: fit-content;
+    padding: 30px;
+}
+@media screen and (max-width: 680px) {
+    .auth-form-container{
+        border: none;
+    }
+}
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.insta-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form > input {
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    outline: none;
+    width: 270px;
+    padding: 9px 0 7px 8px;
+    font-weight: normal;
+}
+
+.auth-form-submit-button {
+    background-color: #0064e0;
+    color: white;
+    font-weight: bold;
+    opacity: .7;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px 16px;
+}
+
+.auth-options {
+    margin-top: 20px;
+}
+.auth-options > a {
+    text-decoration: none;
+}
+
+.auth-options > p{
+    display: inline;
+}
+.credentials {
+    color: red;
+    margin: 0;
+    padding: 0;
+}

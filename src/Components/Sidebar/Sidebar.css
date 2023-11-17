@@ -1,0 +1,50 @@
+.sidebar-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 250px;
+    height: 100%;
+    padding-left: 25px;
+    overflow: scroll;
+    border-right: 1px solid rgb(219, 219, 219);
+}
+
+.sidebar-container::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 680px) {
+    .sidebar-container{
+        display: none;
+    }
+}
+
+.insta-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 180px;
+    height: fit-content;
+    padding: 20px 0;
+}
+
+.nav-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    width: 140px;
+    margin-bottom: 17px;
+    padding: 8px 10px 8px 8px;
+}
+
+.nav-link > p {
+    margin: 0;
+}
+
+.nav-link:hover {
+    background-color: rgb(230, 230, 230);
+    border-radius: 8px;
+}
