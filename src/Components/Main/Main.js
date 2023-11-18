@@ -68,7 +68,7 @@ const Main = () => {
                           <p>{post.user}</p>
                         </div>
                         <div className="postBody">
-                            <img src={post.image} alt=""  width='430'/>
+                            <img src={post.image} alt="" />
                             <div className="user-actions">
                                 <FavoriteBorder onClick={e => likePost(post._id)} className="like-button"/>
                                 <Telegram/>
