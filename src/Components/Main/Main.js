@@ -1,24 +1,14 @@
 import { Avatar, Box, Input, Modal } from "@mui/material";
 import "./Main.css"
 import { BookmarkBorder, FavoriteBorder, Instagram, Menu, Telegram } from "@mui/icons-material";
-import { useEffect } from "react";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { red } from "@mui/material/colors";
-import {  like, setPosts, toggleModal } from "../../utils/actions";
+import {  like, toggleModal } from "../../utils/actions";
 
 const Main = () => {
     const dispatch = useDispatch();
     const posts = useSelector((state)=> state.posts);
     const showModal = useSelector((state)=> state.showModal);
-    useEffect(() => {
-        const getPosts = async () => {
-            const {data} = await axios.get("https://instagram-clone-webdevkoushal.up.railway.app/posts");
-            console.log(data);
-            dispatch(setPosts(data));
-        }
-        getPosts();
-    },[dispatch])
 
     const likePost = (postId) => {
         dispatch(like(postId));
@@ -31,8 +21,8 @@ const Main = () => {
                 <Menu/>
             </div>
             <div className="status-container">
-                {["Rajesh", "Mark", "John", "Nikhil", "Alice"].map(person =>(
-                    <div className="status">
+                {["Rajesh", "Mark", "John", "Nikhil", "Alice"].map((person, index) =>(
+                    <div className="status" key={index}>
                         <Avatar
                     alt={person}
                     sx={{ width: 55, height: 55 }}
